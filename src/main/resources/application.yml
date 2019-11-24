@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /boot
+  port: 9090
+
+bean:
+  propertie: aproperties

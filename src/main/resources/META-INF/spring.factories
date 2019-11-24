@@ -1,0 +1,4 @@
+com.scd.boot.config.EnableAutoBean=\
+com.scd.boot.bean.AutoBeanA,\
+com.scd.boot.bean.AutoBeanB
+
