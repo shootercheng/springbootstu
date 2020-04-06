@@ -31,4 +31,18 @@ public class TestMap {
         });
         System.out.println(result);
     }
+
+    @Test
+    public void testPut() {
+        transformedBeanNameCache.putIfAbsent("name", "cd");
+        transformedBeanNameCache.putIfAbsent("name", "cd1");
+        transformedBeanNameCache.computeIfAbsent("name1", s -> {
+            System.out.println(s);
+            if ("name".equals(s)) {
+                System.out.println(s);
+            }
+            return "name";
+        });
+        System.out.println(transformedBeanNameCache);
+    }
 }

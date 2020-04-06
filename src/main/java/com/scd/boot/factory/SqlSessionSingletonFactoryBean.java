@@ -1,0 +1,27 @@
+package com.scd.boot.factory;
+
+import org.springframework.beans.factory.FactoryBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author James
+ */
+@Configuration
+@ConditionalOnProperty(prefix = "bean.factory", name = "type", havingValue = "single", matchIfMissing = true)
+public class SqlSessionSingletonFactoryBean implements FactoryBean<SqlSession> {
+    @Override
+    public SqlSession getObject() throws Exception {
+        return new SqlSession();
+    }
+
+    @Override
+    public Class<?> getObjectType() {
+        return SqlSession.class;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
+}

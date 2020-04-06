@@ -2,3 +2,6 @@ com.scd.boot.config.EnableAutoBean=\
 com.scd.boot.bean.AutoBeanA,\
 com.scd.boot.bean.AutoBeanB
 
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.scd.chapter.config.HelloServiceAutoConfig
+

@@ -5,3 +5,5 @@ server:
 
 bean:
   propertie: aproperties
+  factory:
+    type: prototype
